@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: corporate-ai-openclaw
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8527939205:AAFWI1EtRA2IAyYnsCnvnFeln0-G4xSvBxY
+      - key: KIMI_API_KEY
+        value: sk-kimi-K9NadaGIDHbNz8axeWHf1vnzkaTvJTwtGH8dicwVbMO4ZdSGQrgrlqT4Ocp4BQDJ
+      - key: NODE_ENV
+        value: production
+    plan: free
+    
+databases:
+  - name: corporate-ai-db
+    plan: free
